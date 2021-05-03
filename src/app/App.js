@@ -1,8 +1,8 @@
 import { Component } from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import PokePage from '../villagers/VillagerPage';
-import './App.scss';
+import PokePage from '../Poke/PokePage';
+import './app.scss';
 
 class App extends Component {
 
