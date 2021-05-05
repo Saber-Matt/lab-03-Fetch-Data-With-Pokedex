@@ -28,7 +28,7 @@ export default class PokePage extends Component {
     try {
       const response = await request
         .get(POKES_API_URL)
-        .query({ pokes: search })
+        .query({ pokemon: search })
         .query({ page: page });
 
       this.setState({ Pokes: response.body.results });
@@ -64,7 +64,7 @@ export default class PokePage extends Component {
   }
 
   render() {
-    const { pokes, loading, page } = this.state;
+    const { Pokes, loading, page } = this.state;
 
     return (
       <div className="PokePage">
@@ -78,9 +78,9 @@ export default class PokePage extends Component {
         </section>
 
         <main>
-          {pokes && (pokes.length
-            ? <PokeList pokes={pokes} />
-            : <p>Sorry no pokes :(</p>)
+          {Pokes && (Pokes.length
+            ? <PokeList Pokes={Pokes} />
+            : <p>Sorry no Pokes :(</p>)
           }
 
           <Loading loading={loading} />
