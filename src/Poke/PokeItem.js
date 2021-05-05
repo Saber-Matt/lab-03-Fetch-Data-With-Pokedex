@@ -11,8 +11,8 @@ class PokeItem extends Component {
         <h2>{Poke.name}</h2>
 
         <img
-          src={Poke.image}
-          alt={Poke.name}
+          src={Poke.url_image}
+          alt={Poke.pokemon}
         />
 
       </li>
