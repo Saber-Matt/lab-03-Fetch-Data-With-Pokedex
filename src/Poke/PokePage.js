@@ -28,10 +28,10 @@ export default class PokePage extends Component {
     try {
       const response = await request
         .get(POKES_API_URL)
-        .query({ name: search })
+        .query({ pokes: search })
         .query({ page: page });
 
-      this.setState({ Pokes: response.body });
+      this.setState({ Pokes: response.body.results });
     }
     catch (err) {
       console.log(err);
